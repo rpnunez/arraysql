@@ -1,5 +1,7 @@
 <?php
 
+namespace Nunez;
+
 error_reporting(E_ALL);
 
 echo '<p>Hello, world!</p>';
@@ -29,7 +31,7 @@ $cars = array(
 );
 
 require_once '../ArraySQL.php';
-$query = new \Nunez\ArraySQL($cars);
-log($query);
+$query = new ArraySQL($cars);
+debug($query);
 $query->select('name')->with('corvette');
 $result = $query->result();
