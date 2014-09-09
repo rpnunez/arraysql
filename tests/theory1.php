@@ -32,6 +32,9 @@ $cars = array(
 
 require_once '../ArraySQL.php';
 $query = new ArraySQL($cars);
-debug($query);
 $query->select('name')->with('corvette');
 $result = $query->result();
+debug($result);
+
+echo '<hr />';
+\debug_print_backtrace();
